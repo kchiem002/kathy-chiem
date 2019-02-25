@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kathy Chiem</title>
 
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <style>
@@ -15,8 +16,11 @@
         }
 
         body {
-            /* background-image: url("./images/pawel-czerwinski-1343790-unsplash.jpg") */
             font-family: 'Playfair Display', serif;
+            /* sticky footer */
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
         }
 
         h1 {
@@ -55,13 +59,12 @@
         }
 
         #profile-image {
-            float: left;
-            padding: 20px;
+            margin-left: 40%;
         }
 
         a:hover {
             font-weight: bold;
-            font-size: 12pt;
+            font-size: 14pt;
         }
 
         img:hover {
@@ -73,170 +76,211 @@
             -moz-transition: 0.5s ease;
         }
 
-        #company:hover {
-            font-weight: bold;
+        .card {
+            width: 450px;
+            height: 500px;
         }
 
+        .card-image {
+            width: 450px;
+            height: 300px;
+        }
+
+        button {
+            margin-left: 45%;
+        }
+
+/* sticky footer */
+        main {
+            flex: 1 0 auto;
+        }
 
     </style>
 
 </head>
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-                <!-- <a href="#!" class="brand-logo"></a> -->
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#introduction">About</a></li>
-                    <li><a href="#structure">Portfolio</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#footer">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <!-- <a href="#!" class="brand-logo"></a> -->
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+    <div id="about" class="section scrollspy">
+        <h1>about <font color="teal">me</font>
+        </h1>
+        <img class="circle responsive-img" id="profile-image" src="./images/profile-picture.JPG" alt="Profile Image"
+            style="width: 200px">
+        <h2>hello, my name is Kathy Chiem and I am an aspiring web developer...</h2>
+        <p>I currently work in Marketing Operations at Experian. My team currently works on CreditMatch.com and I
+            work closely with Product Managers and web developers on a daily basis. I am familiar with agile/scrum work
+            environments and creating JIRA stories for web development teams. Because I am so involved with technology
+            teams at Experian, I found an interest for web development and it has given me the drive/aspiration to learn
+            it. And now I am a student at UCI's full-stack web development bootcamp program, and loving it! I am hoping
+            I can gain the skills to further benefit my team at CreditMatch.com</p>
     </div>
 
-    <div class="container">
-        <div id="introduction" class="section scrollspy">
-            <h1 id="about"><br>About me</h1>
-            <h2>Hello, my name is Kathy Chiem and I am an aspiring web developer...</h2>
-            <img class="circle responsive-img" id="profile-image" src="./images/profile-picture.JPG" alt="Profile Image"
-                style="width: 200px">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, sit odio! Quos nesciunt ipsam, quo maxime
-                harum
-                impedit aperiam quod similique ea dolorum laboriosam quae excepturi nemo obcaecati, iste molestias! Lorem
-                ipsum
-                dolor sit amet consectetur adipisicing elit. Ipsum molestias repellendus libero illum voluptates nulla
-                officiis
-                quod sit in dolorum omnis, repudiandae, ullam vero fugiat adipisci laborum possimus quaerat aperiam! Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Consequatur maiores sint pariatur doloremque doloribus
-                earum
-                mollitia culpa. Ipsa enim atque corporis deleniti saepe rerum necessitatibus labore consequatur architecto
-                consequuntur? Praesentium!</p>
-        </div>
-
-        <div id="structure" class="section scrollspy">
-            <h1 id="portfolio"><br>Portfolio</h1>
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./images/basic-portfolio.png" alt="my basic portfolio">
-                            <span class="card-title">HTML & CSS Basic Portfolio</span>
-                        </div>
-                        <div class="card-content">
-                            <p>This is my first website. It is a basic portfolio built on HTML and CSS from scratch. This
-                                site is currently hosted on GitHub. Click on the link below to see it.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="https://kchiem002.github.io/Basic-Portfolio/">Go to page</a>
-                        </div>
+    <div id="portfolio" class="section scrollspy">
+        <h1>my <font color="teal">portfolio</font>
+        </h1>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./images/basic-portfolio.png" alt="my basic portfolio" class="card-image">
+                        <span class="card-title">HTML & CSS Basic Portfolio</span>
+                    </div>
+                    <div class="card-content">
+                        <p>This is my first website. It is a basic portfolio built on HTML and CSS from scratch. This
+                            site is currently hosted on GitHub. Click on the link below to see it.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://kchiem002.github.io/Basic-Portfolio/">Go to page</a>
                     </div>
                 </div>
-                <div class="col s12 m6">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./images/project-2.jpg">
-                            <span class="card-title">Upcoming project</span>
-                        </div>
-                        <div class="card-content">
-                            <p>Coming soon...</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#footer">Connect with me</a>
-                        </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./images/project-2.jpg" alt="upcoming project" class="card-image">
+                        <span class="card-title">Upcoming project</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Coming soon...</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#footer">Connect with me</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-
-        <h1 id="experience"><br>Experience</h1>
-        <h2>My professional experience</h2>
+    <div id="experience" class="section scrollspy">
+        <h1>my <font color="teal">experience</font>
+        </h1>
+        <h2>professional experience</h2>
         <ul class="collection">
             <li class="collection-item avatar">
-                <img src="./images/experian-logo.png" alt="" class="circle">
-                <span class="title" id="company">Experian</a>
-                    <p>Marketing Operations Analyst</p>
-                    <span class="secondary-content"><i class="material-icons">May 2017 - Present</i></span>
+                <img src="./images/experian-logo.png" alt="Experian Logo" class="circle">
+                <a class="title" href="https://www.experian.com/">Experian</a>
+                <p>Marketing Operations Analyst</p>
+                <span class="secondary-content"><i class="material-icons">May 2017 - Present</i></span>
             </li>
             <li class="collection-item avatar">
-                <img src="./images/nationrep-logo-blue.png" alt="" class="circle">
-                <span class="title">NationRep</span>
-                <p>Co-Founder<br></p>
+                <img src="./images/nationrep-logo-blue.png" alt="NationRep Logo" class="circle">
+                <a class="title" href="#about">NationRep</a>
+                <p>Co-Founder</p>
                 <span class="secondary-content"><i class="material-icons">July 2016 - May 2017</i></span>
             </li>
             <li class="collection-item avatar">
-                <img src="./images/portfolio-logo.png" alt="" class="circle">
-                <span class="title">Portfolio Insurance</span>
+                <img src="./images/portfolio-logo.png" alt="Portfolio Ins Logo" class="circle">
+                <a class="title" href="http://us.portfolioco.com/">Portfolio Insurance</a>
                 <p>Compliance Analyst</p>
                 <span class="secondary-content"><i class="material-icons">Dec 2014 - July 2016</i></span>
             </li>
         </ul>
-        <h2>My education</h2>
+        <h2>education</h2>
         <ul class="collection">
             <li class="collection-item avatar">
-                <img src="./images/uci-logo.png" alt="" class="circle">
-                <span class="title">University of California, Irvine</span>
+                <img src="./images/uci-logo.png" alt="UCI Logo" class="circle">
+                <a class="title" href="https://uci.edu/">University of California, Irvine</a>
                 <p>Full-Stack Web-Development Bootcamp</p>
                 <span class="secondary-content"><i class="material-icons">Feb 2019 - Present</i></span>
             </li>
             <li class="collection-item avatar">
-                <img src="./images/ucr-logo.png" alt="" class="circle">
-                <span class="title">University of California, Riverside</span>
+                <img src="./images/ucr-logo.png" alt="UCR Logo" class="circle">
+                <a class="title" href="https://www.ucr.edu/">University of California, Riverside</a>
                 <p>B.A. in Political Science Law & Society, Business Administration</p>
                 <span class="secondary-content"><i class="material-icons">Sept 2010 - Aug 2014</i></span>
             </li>
         </ul>
-        <h2>My certifications</h2>
+        <h2>certifications</h2>
         <ul class="collection">
             <li class="collection-item avatar">
-                <img src="./images/CSPO.png" alt="" class="circle">
-                <span class="title">Scrum Alliance</span>
+                <img src="./images/CSPO.png" alt="CSPO Badge" class="circle">
+                <a class="title" href="https://www.scrumalliance.org/">Scrum Alliance</a>
                 <p>Certified Scrum Product Owner</p>
                 <span class="secondary-content"><i class="material-icons">Active since 2017</i></span>
             </li>
             <li class="collection-item avatar">
-                <img src="./images/CSM.png" alt="" class="circle">
-                <span class="title">Scrum Alliance</span>
+                <img src="./images/CSM.png" alt="CSM Badge" class="circle">
+                <a class="title" href="https://www.scrumalliance.org/">Scrum Alliance</a>
                 <p>Certified Scrum Master</p>
                 <span class="secondary-content"><i class="material-icons">Active since 2017</i></span>
             </li>
         </ul>
-
     </div>
 
-    <footer class="page-footer" id="footer">
+    <div id="contact" class="section scrollspy">
+        <h1>contact <font color="teal">me</font>
+        </h1>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Your name</label>
+                    </div>
+                </div>
+            </form>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Your email</label>
+                    </div>
+                </div>
+            </form>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Your message</label>
+                    </div>
+                </div>
+            </form>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right"></i>
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<footer class="page-footer" id="footer" class="section scrollspy">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Connect with me</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="https://twitter.com/kathy_chiem">Twitter</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/kathy-chiem-58a73852/">LinkedIn</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/kchiem002">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
         <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                        content.</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Connect with me</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="kchie002@gmail.com">Google</a></li>
-                        <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/kathy-chiem-58a73852/">LinkedIn</a></li>
-                        <li><a class="grey-text text-lighten-3" href="https://github.com/kchiem002">GitHub</a></li>
-                    </ul>
-                </div>
-            </div>
+            © 2019 Copyright. All Rights Reserved.
+            <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
         </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2019 Copyright. All Rights Reserved.
-                <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
-            </div>
-        </div>
-    </footer>
+    </div>
+</footer>
 
-    <!-- Materialize JS -->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
 
-    
+<!-- Materialize JS -->
+<script src="app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
 
 </html>
