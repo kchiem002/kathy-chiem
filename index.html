@@ -122,7 +122,8 @@
         <p>I currently work in Marketing Operations at Experian. My team currently works on CreditMatch.com and I
             work closely with Product Managers and web developers on a daily basis. I am familiar with agile/scrum work
             environments and creating JIRA stories for web development teams. Because I am so involved with technology
-            teams at Experian, I found an interest for web development and it has given me the drive/aspiration to learn
+            teams at Experian, I found an interest for web development and it has given me the drive/aspiration to
+            learn
             it. And now I am a student at UCI's full-stack web development bootcamp program, and loving it! I am hoping
             I can gain the skills to further benefit my team at CreditMatch.com</p>
     </div>
@@ -278,8 +279,13 @@
 
 
 <!-- Materialize JS -->
-<script src="app.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.scrollspy');
+      var instances = M.ScrollSpy.init(elems, {});
+    });
+</script>
 
 </body>
 
