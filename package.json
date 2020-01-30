@@ -1,0 +1,27 @@
+{
+  "name": "kathy-chiem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@sendgrid/mail": "^6.5.1",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^0.20.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kchiem002/kathy-chiem.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kchiem002/kathy-chiem/issues"
+  },
+  "homepage": "https://github.com/kchiem002/kathy-chiem#readme"
+}

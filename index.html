@@ -264,7 +264,7 @@
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <textarea id="full_name" class="materialize-textarea"></textarea>
                         <label for="textarea1">Your name</label>
                     </div>
                 </div>
@@ -272,7 +272,7 @@
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <textarea id="email" class="materialize-textarea"></textarea>
                         <label for="textarea1">Your email</label>
                     </div>
                 </div>
@@ -280,12 +280,12 @@
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <textarea id="message" class="materialize-textarea"></textarea>
                         <label for="textarea1">Your message</label>
                     </div>
                 </div>
             </form>
-            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <button class="btn waves-effect waves-light" type="submit" name="action" onClick=submitMessage()>Submit
                 <i class="material-icons right"></i>
             </button>
         </div>
@@ -316,13 +316,10 @@
 
 
 <!-- Materialize JS -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src='./app.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.scrollspy');
-      var instances = M.ScrollSpy.init(elems, {});
-    });
-</script>
 
 </body>
 
