@@ -4,8 +4,8 @@ const bodyParser = require('body-parser');
 // const keys = require('./config/keys')
 
 const app = express()
-
-app.use(bodyParser.json())
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 
 require("./routes/emailRoutes.js")(app)
 
